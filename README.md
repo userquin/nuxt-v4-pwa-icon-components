@@ -5,6 +5,6 @@ After installing the dependencies, go to [index page](app/pages/index.vue) and c
 - check `PwaMaskableImage` and `PwaAppleImage` there is only 1 pwa icon available:
    - mouse over displays the image
    - ctrl + space doesn't display the image
-   - if uou use `:image="'`, suggestion will be there
+   - if you use `:image="'`, suggestion will be there
 - composables seems to be fine
 - `$pwaIcons?.<type>['<image>']` seems to be also fine
