@@ -1,75 +1,10 @@
-# Nuxt Minimal Starter
+# https://youtrack.jetbrains.com/issue/WEB-74161
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+After installing the dependencies, go to [index page](app/pages/index.vue) and check the image attributes in the `<PwaXXXX>` components:
+- works when there are mora than 2 images in the pwa icon types
+- check `PwaMaskableImage` and `PwaAppleImage` there is only 1 pwa icon available:
+   - mouse over displays the image
+   - crtl + space doesn't display the image
+   - if uou use `:image="'` suggestion will be there
+- composables seems to be fine
+- `$pwaIcons?.<type>['<image>']` seems to be also fine

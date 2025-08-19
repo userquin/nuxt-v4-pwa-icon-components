@@ -1,8 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        allowArbitraryExtensions: true,
+        allowImportingTsExtensions: true,
+        // traceResolution: true,
+      },
+    },
+  },
   devtools: { enabled: true },
-  modules: ['@vite-pwa/nuxt'],
+  modules: ['@vite-pwa/nuxt'/*, '@nuxt/ui'*/],
+  routeRules: {
+    '/': { prerender: true },
+  },
   pwa: {
     mode: 'development',
     strategies: 'generateSW',

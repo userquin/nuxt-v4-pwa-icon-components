@@ -10,18 +10,32 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^4.0.1",
+    "nuxt": "https://pkg.pr.new/nuxt@32758",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@nuxt/kit": "https://pkg.pr.new/@nuxt/kit@32758",
+    "@nuxt/schema": "https://pkg.pr.new/@nuxt/schema@32758",
+    "@nuxt/vite-builder": "https://pkg.pr.new/@nuxt/vite-builder@32758",
     "@vite-pwa/assets-generator": "^1.0.0",
-    "@vite-pwa/nuxt": "^1.0.4",
-    "vite-plugin-pwa": "file:vite-plugin-pwa-1.0.1.tgz"
+    "@vite-pwa/nuxt": "1.0.4",
+    "@vue/language-server": "^3.0.4",
+    "typescript": "^5.8.3",
+    "vite-plugin-pwa": "^1.0.3",
+    "vue-tsc": "^3.0.4"
   },
   "pnpm": {
     "overrides": {
-      "vite-plugin-pwa": "file:vite-plugin-pwa-1.0.1.tgz"
-    }
+      "@nuxt/kit": "https://pkg.pr.new/@nuxt/kit@32758",
+      "@nuxt/schema": "https://pkg.pr.new/@nuxt/schema@32758",
+      "@nuxt/vite-builder": "https://pkg.pr.new/@nuxt/vite-builder@32758",
+      "@vite-pwa/nuxt": "file:vite-pwa-nuxt-1.0.4.tgz"
+    },
+    "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "sharp",
+      "vue-demi"
+    ]
   }
 }
